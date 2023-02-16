@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        .container {
+          @apply max-[1440px]:max-w-[1100px]
+        }
+    </style>
     <title>Главная</title>
 </head>
 <body>
     <header class="bg-[url('assets/img/bg.png')] bg-cover h-screen w-full">
         <nav class="container mx-auto flex flex-col h-full">
             <div class="flex justify-between items-center py-14">
-                <a href="#" class=""><img src="assets/img/LOGO.png" alt="LOGO"></a>
+                <a href="#"><img src="assets/img/LOGO.png" alt="LOGO"></a>
                 <div class="flex gap-5 text-white text-sm items-center">
                     <div class="flex gap-5 font-bold">
                         <a href="#" class="uppercase">главная</a>
@@ -23,7 +28,7 @@
                     <div class="flex gap-10 border-l-2 items-center">
                         <div class="flex flex-col pl-8">
                             <div class="flex gap-2 items-center">
-                                <img src="assets/img/phone.png" alt="phone" class="">
+                                <img src="assets/img/phone.png" alt="phone">
                                 <a href="#" class="text-lg font-bold">+999-888-76-54</a>
                             </div>
                             <p class="w-2/3">Свяжитесь с нами для 
@@ -46,19 +51,19 @@
             <div class="grid grid-cols-3 gap-8 absolute bottom-0 translate-y-2/3 container">
                 <div class="bg-white px-9 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
                     <img src="assets/img/icon.png" alt="icon">
-                    <p class="">Магическая <span class="text-[#BC9060]">Атмосфера</span> </p>
+                    <p>Магическая <span class="text-[#BC9060]">Атмосфера</span> </p>
                     <p class="text-[#656363] text-center">В нашем заведении царит магическая атмосфера
                         наполненная вкусными ароматами</p>
                 </div>
                 <div class="bg-white px-9 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
                     <img src="assets/img/icon.png" alt="icon">
-                    <p class="">Лучшее качество <span class="text-[#BC9060]">Еды</span> </p>
+                    <p>Лучшее качество <span class="text-[#BC9060]">Еды</span> </p>
                     <p class="text-[#656363] text-center">Качество нашей 
-                        <span class="block">Еды - отменное</span>!</p>
+                        <span class="block">Еды - отменное!</span></p>
                 </div>
                 <div class="bg-white px-9 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
                     <img src="assets/img/icon.png" alt="icon">
-                    <p class="">Недорогая <span class="text-[#BC9060]">Еда</span> </p>
+                    <p>Недорогая <span class="text-[#BC9060]">Еда</span> </p>
                     <p class="text-[#656363] text-center">Стоимость нашей Еды
                         зависит только от ее
                         количества. Качество
@@ -112,11 +117,11 @@
         <p class="text-[54px] text-center">Наши <span class="text-[#D67E34]">Блюда</span></p>
         <div class="grid grid-cols-7 gap-7">
             <div class="col-span-3">
-                <img src="assets/img/main-dish.png" alt="main-dish" class="w-full object-cover">
+                <img src="assets/img/main-dish.png" alt="main-dish" class="w-full h-full object-cover">
             </div>
             <div class="col-span-4 flex flex-col gap-7 items-center">
                 <div class="flex justify-between gap-7 w-full grow">
-                    <div class="flex">
+                    <div class="flex aspect-square">
                         <img src="assets/img/hamburger.png" alt="hamburger" class="w-full aspect-square">
                     </div>
                     <div class="flex justify-between items-center text-2xl w-full">
@@ -126,7 +131,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between gap-7 w-full grow">
-                    <div class="flex">
+                    <div class="flex aspect-square">
                         <img src="assets/img/hamburger.png" alt="hamburger" class="w-full aspect-square">
                     </div>
                     <div class="flex justify-between items-center text-2xl w-full">
@@ -136,7 +141,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between gap-7 w-full grow">
-                    <div class="flex">
+                    <div class="flex aspect-square">
                         <img src="assets/img/hamburger.png" alt="hamburger" class="w-full aspect-square">
                     </div>
                     <div class="flex justify-between items-center text-2xl w-full">
@@ -149,5 +154,99 @@
             </div>
         </div>
     </div>
+
+    <div class="bg-[url('assets/img/menu.png')] h-screen bg-cover flex flex-col">
+        <p class="text-[54px] text-center pt-24 pb-32 text-white">Наше меню</p>
+        <div class="container mx-auto grid grid-cols-3 gap-7">
+            <div class="flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7 relative">
+                <div class="absolute top-0 left-0 py-2 px-3 bg-[#D67E34] w-fit text-[13px]">RECOMMENDED</div>
+                <div class="relative">
+                    <img src="assets/img/item.png" alt="item">
+                    <div class="flex items-center justify-center rounded-full border-8 border-white text-white text-3xl bg-[#D67E34] w-[100px] h-[100px] absolute bottom-0 right-0 translate-x-2">420</div>
+                </div>
+                <p class="text-2xl">Гамбургер макси</p>
+                <p class="text-base text-center">Максимально толстый 
+                    слой мяса</p>
+                <a href="#" class="bg-[#D67E34] text-white py-3 px-16 w-fit shadow-lg">ЗАКАЗАТЬ</a>
+            </div>
+            <div class="flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7">
+                <div class="relative">
+                    <img src="assets/img/item.png" alt="item">
+                    <div class="flex items-center justify-center rounded-full border-8 border-white text-white text-3xl bg-[#D67E34] w-[100px] h-[100px] absolute bottom-0 right-0 translate-x-2">420</div>
+                </div>
+                <p class="text-2xl">Гамбургер макси</p>
+                <p class="text-base text-center">Максимально толстый 
+                    слой мяса</p>
+                <a href="#" class="bg-[#D67E34] text-white py-3 px-16 w-fit shadow-lg">ЗАКАЗАТЬ</a>
+            </div>
+            <div class="flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7">
+                <div class="relative">
+                    <img src="assets/img/item.png" alt="item">
+                    <div class="flex items-center justify-center rounded-full border-8 border-white text-white text-3xl bg-[#D67E34] w-[100px] h-[100px] absolute bottom-0 right-0 translate-x-2">420</div>
+                </div>
+                <p class="text-2xl">Гамбургер макси</p>
+                <p class="text-base text-center">Максимально толстый 
+                    слой мяса</p>
+                <a href="#" class="bg-[#D67E34] text-white py-3 px-16 w-fit shadow-lg">ЗАКАЗАТЬ</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#C4C4C4]">
+        <div class="container mx-auto py-[102px] px-24">
+            <div class="flex flex-col items-center text-[20px]">
+                <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                    Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                <p class="font-semibold">Посетитель</p>
+                <p>Николай</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="relative my-[100px]">
+        <div class="absolute left-0 top-[145px] w-8 h-[100px] bg-red-600"></div>
+        <div class="absolute right-0 top-[145px] w-8 h-[100px] bg-red-600"></div>
+        <div class="container mx-auto">
+            <p class="text-[54px] text-center mb-16">Галерея <span class="text-[#D67E34]">Блюд</span></p>
+            <div class="grid grid-cols-4 gap-7">
+                <div class="col-span-2">
+                    <a href="#"><img src="assets/img/gallery1.png" alt="gallery1" class="w-full h-full object-cover"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="assets/img/gallery2.png" alt="gallery2" class="w-full h-full object-cover"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="assets/img/gallery3.png" alt="gallery3" class="w-full h-full object-cover"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="assets/img/gallery2.png" alt="gallery1" class="w-full h-full object-cover"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="assets/img/gallery3.png" alt="gallery2" class="w-full h-full object-cover"></a>
+                </div>
+                <div class="col-span-2">
+                    <a href="#"><img src="assets/img/gallery1.png" alt="gallery3" class="w-full h-full object-cover"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto mb-[100px]">
+        <p class="text-[54px] text-center mb-24">Наши <span class="text-[#D67E34]">Повара</span></p>
+        <div class="grid grid-cols-3 gap-7">
+            <div>
+                <img src="assets/img/cook1.png" alt="cook1" class="object-cover w-full">
+            </div>
+            <div>
+                <img src="assets/img/cook2.png" alt="cook2" class="object-cover w-full">
+            </div>
+            <div>
+                <img src="assets/img/cook3.png" alt="cook3" class="object-cover w-full">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[url('assets/img/footer.png')] w-full h-[732px] bg-cover bg-center">&nbsp</div>
 </body>
 </html>
