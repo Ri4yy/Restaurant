@@ -5,15 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap" rel="stylesheet">
     <style type="text/tailwindcss">
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Tinos&display=swap');
+        
         .container {
           @apply max-[1440px]:max-w-[1100px]
+        }
+        .swiper-pagination-bullet-active {
+            border: 2px solid #FF7400;
+            background-color: transparent;
+            box-sizing: content-box;
         }
     </style>
     <title>Главная</title>
 </head>
 <body>
-    <header class="bg-[url('assets/img/bg.png')] bg-cover h-screen w-full">
+    <header class="bg-[url('assets/img/bg.png')] bg-cover h-screen w-full font-tinos">
         <nav class="container mx-auto flex flex-col h-full">
             <div class="flex justify-between items-center py-14">
                 <a href="#"><img src="assets/img/LOGO.png" alt="LOGO"></a>
@@ -194,13 +208,32 @@
 
     <div class="bg-[#C4C4C4]">
         <div class="container mx-auto py-[102px] px-24">
-            <div class="flex flex-col items-center text-[20px]">
-                <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
-                    Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
-                <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
-                <p class="font-semibold">Посетитель</p>
-                <p>Николай</p>
-            </div>
+                <div class="swiper text-[20px] pb-10">
+                    <div class="swiper-wrapper w-full">
+                      <div class="swiper-slide flex flex-col items-center">
+                        <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                            Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                        <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                        <p class="font-semibold">Посетитель</p>
+                        <p>Николай</p>
+                      </div>
+                      <div class="swiper-slide flex flex-col items-center">
+                        <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                            Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                        <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                        <p class="font-semibold">Посетитель</p>
+                        <p>Николай</p>
+                      </div>
+                      <div class="swiper-slide flex flex-col items-center">
+                        <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                            Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                        <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                        <p class="font-semibold">Посетитель</p>
+                        <p>Николай</p>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination bottom-0 flex items-center justify-center"></div>
+                </div>
         </div>
     </div>
 
@@ -248,5 +281,7 @@
     </div>
 
     <footer class="bg-[url('assets/img/footer.png')] w-full h-[732px] bg-cover bg-center"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/script/swiper.js"></script>
 </body>
 </html>
