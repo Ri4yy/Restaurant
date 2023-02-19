@@ -27,17 +27,20 @@
     <title>Главная</title>
 </head>
 <body>
-    <header class="bg-[url('assets/img/bg.png')] bg-cover h-screen w-full font-tinos">
-        <nav class="container mx-auto flex flex-col h-full">
-            <div class="flex justify-between items-center py-14">
-                <a href="#"><img src="assets/img/LOGO.png" alt="LOGO"></a>
-                <div class="flex gap-5 text-white text-sm items-center">
+    <header class="bg-[url('assets/img/bg.png')] bg-cover bg-no-repeat bg-center h-screen w-full">
+        <nav class="xl:container xl:mx-auto xl:px-0 px-4 flex flex-col h-full">
+            <div class="flex justify-between items-center sm:py-14 py-5 relative">
+                <a href="#"><img src="assets/img/LOGO.png" alt="LOGO" class="sm:w-full w-1/2"></a>
+                <div class="flex items-center xl:hidden z-50" id="openMenu">
+                    <img src="assets/img/burger-menu.png" alt="menu">
+                </div>
+                <div class="xl:flex gap-5 text-white text-sm items-center hidden">
                     <div class="flex gap-5 font-bold">
                         <a href="#" class="uppercase">главная</a>
                         <a href="#" class="uppercase">меню</a>
                         <a href="#" class="uppercase">о нас</a>
                         <a href="#" class="uppercase">бронь</a>
-                        <a href="#" class="uppercase"><img src="assets/img/cart.png" alt="cart"></a>
+                        <a href="#" class="uppercase flex items-center"><img src="assets/img/cart.png" alt="cart"></a>
                     </div>
                     <div class="flex gap-10 border-l-2 items-center">
                         <div class="flex flex-col pl-8">
@@ -51,33 +54,42 @@
                         <a href="#" class="px-5 py-3 bg-[#FF7400] flex items-center font-bold h-fit">ЗАКАЗ СТОЛИКА</a>
                     </div>
                 </div>
+
+                <div class="hidden absolute h-screen pt-20 lg:pt-32 top-0 flex flex-col gap-8 text-center -translate-x-1/2 left-1/2 w-full z-20 bg-white" id="menu">
+                    <a href="#" class="text-[#3C3D41] text-2xl tracking-widest uppercase">Главная</a>
+                    <a href="#" class="text-[#3C3D41] text-2xl tracking-widest uppercase">меню</a>
+                    <a href="#" class="text-[#3C3D41] text-2xl tracking-widest uppercase">О нас</a>
+                    <a href="#" class="text-[#3C3D41] text-2xl tracking-widest uppercase">бронь</a>
+                    <a href="#" class="text-[#3C3D41] text-2xl tracking-widest uppercase">+999-888-76-54</a>
+                </div>
+
             </div>
         
-            <div class="text-[#D67E35] flex flex-col items-center w-fit gap-5 my-auto">
+            <div class="text-[#D67E35] flex flex-col items-center lg:my-auto lg:m-0 m-auto w-fit gap-5">
                 <div class="flex flex-col items-center">
-                    <p class="text-5xl">Добро пожаловать в</p>
-                    <p class="text-[80px]">Наш ресторан</p>
-                    <div class="text-lg text-white before:w-16 before:h-0.5 before:bg-white before:block after:w-16 after:h-0.5 after:bg-white after:block flex items-center gap-2">ДОМ ЛУЧШЕЙ ЕДЫ</div>
+                    <p class="sm:text-5xl text-3xl">Добро пожаловать в</p>
+                    <p class="sm:text-[80px] text-[40px]">Наш ресторан</p>
+                    <div class="text-lg text-white before:w-16 before:h-0.5 before:bg-white before:block after:w-16 after:h-0.5 after:bg-white after:block sm:flex items-center gap-2 hidden">ДОМ ЛУЧШЕЙ ЕДЫ</div>
                 </div>
                 <a href="#" class="px-7 py-3 bg-[#FF7400] flex items-center text-white font-bold w-fit">VIEW MENU</a>
             </div>
 
-            <div class="grid grid-cols-3 gap-8 absolute bottom-0 translate-y-2/3 container">
-                <div class="bg-white px-9 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
+            <div class="xl:container xl:px-0 pr-4 grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-8 gap-4 absolute bottom-0 md:translate-y-2/3 translate-y-[90%]">
+                <div class="bg-white sm:px-9 px-3 pt-16 pb-6 flex flex-col col-span-1 sm:col-span-2 md:col-span-1 items-center gap-4 text-2xl shadow-2xl">
                     <img src="assets/img/icon.png" alt="icon">
-                    <p>Магическая <span class="text-[#BC9060]">Атмосфера</span> </p>
+                    <p class="text-center">Магическая <span class="text-[#BC9060]">Атмосфера</span> </p>
                     <p class="text-[#656363] text-center">В нашем заведении царит магическая атмосфера
                         наполненная вкусными ароматами</p>
                 </div>
-                <div class="bg-white px-9 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
+                <div class="bg-white sm:px-9 px-3 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
                     <img src="assets/img/icon.png" alt="icon">
-                    <p>Лучшее качество <span class="text-[#BC9060]">Еды</span> </p>
+                    <p class="text-center">Лучшее качество <span class="text-[#BC9060]">Еды</span> </p>
                     <p class="text-[#656363] text-center">Качество нашей 
                         <span class="block">Еды - отменное!</span></p>
                 </div>
-                <div class="bg-white px-9 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
+                <div class="bg-white sm:px-9 px-3 pt-16 pb-6 flex flex-col items-center gap-4 text-2xl shadow-2xl">
                     <img src="assets/img/icon.png" alt="icon">
-                    <p>Недорогая <span class="text-[#BC9060]">Еда</span> </p>
+                    <p class="text-center">Недорогая <span class="text-[#BC9060]">Еда</span> </p>
                     <p class="text-[#656363] text-center">Стоимость нашей Еды
                         зависит только от ее
                         количества. Качество
@@ -87,16 +99,16 @@
         </nav>  
     </header>
 
-    <div class="container mx-auto flex justify-between items-center mt-[400px]">
-        <div class="flex flex-col w-2/5 gap-20">
+    <div class="xl:container xl:mx-auto xl:px-0 px-4 flex md:flex-row flex-col justify-between items-center md:mt-[400px] sm:mt-[700px] mt-[1000px]">
+        <div class="flex flex-col md:w-2/5 w-full gap-20">
             <div class="flex flex-col gap-5 items-center">
-                <p class="text-[54px]">Наша <span class="text-[#D67E34]">История</span> </p>
+                <p class="lg:text-[54px] sm:text-[46px] text-[40px] text-center sm:text-left">Наша <span class="text-[#D67E34] block sm:inline">История</span> </p>
                 <p class="text-base text-center">Как и у любого другого самобытного места, у нас есть своя, особая история. 
                     Идея ресторана пришла основателям неожиданно. 
                     Во время прогулки по лесу создатель нашего ресторана застрял в сотнях километров от ближайшего населенного пункта. 
                     Вдали от цивилизации и связи им пришлось навремя обустровать себе нехитрый быт, добывать и готовить себе еду.</p>
             </div>
-            <div class="grid grid-cols-3 px-14">
+            <div class="grid sm:grid-cols-3 grid-cols-1 sm:px-14 px-0 sm:gap-0 gap-10">
                 <div class="flex flex-col gap-0.5 items-center">
                     <p class="text-[#BC9060] text-4xl">93</p>
                     <p class="text-lg">Напитки</p>
@@ -111,36 +123,36 @@
                 </div>
             </div>
         </div>
-        <div class="w-1/2 flex justify-end">
+        <div class="md:w-1/2 w-full flex justify-end md:mt-0 mt-10">
             <img src="assets/img/history.png" alt="history" class="w-full">
         </div>
     </div>
 
-    <div class="bg-[url('assets/img/bg2.png')] bg-cover h-full w-full my-28">
-        <div class="container mx-auto flex justify-between items-center py-20">
-            <div class="flex flex-col gap-5 w-1/2">
-                <p class="text-5xl text-[#D67E34]">Отпразднуйте в одном из 
+    <div class="bg-[url('assets/img/bg2.png')] bg-cover h-full w-full md:my-[100px] my-[70px]">
+        <div class="xl:container xl:mx-auto xl:px-0 px-4 flex md:flex-row flex-col justify-between items-center py-20">
+            <div class="flex flex-col gap-5 md:w-1/2 md:items-start items-center w-full md:mb-0 mb-3">
+                <p class="md:text-5xl text-3xl text-[#D67E34] text-center md:text-left">Отпразднуйте в одном из 
                     самых лучших ресторанов.</p>
-                <p class="text-2xl font-bold text-white">Только в этом месяце бизнес-ланч от 250 ₽</p>
+                <p class="text-2xl font-bold text-white text-center md:text-left">Только в этом месяце бизнес-ланч от 250 ₽</p>
             </div>
             <a href="#" class="bg-[#FF7400] px-5 py-3 text-white text-sm font-bold w-fit">ЗАКАЗ СТОЛИКА</a>
         </div>
     </div>
 
-    <div class="container mx-auto flex flex-col gap-32 mb-36">
-        <p class="text-[54px] text-center">Наши <span class="text-[#D67E34]">Блюда</span></p>
-        <div class="grid grid-cols-7 gap-7">
+    <div class="xl:container xl:mx-auto xl:px-0 flex flex-col md:gap-32 gap-16 mb-36">
+        <p class="lg:text-[54px] sm:text-[46px] text-[40px] text-center">Наши <span class="text-[#D67E34] block sm:inline">Блюда</span></p>
+        <div class="grid sm:grid-cols-7 grid-cols-3 sm:gap-7 gap-y-7">
             <div class="col-span-3">
                 <img src="assets/img/main-dish.png" alt="main-dish" class="w-full h-full object-cover">
             </div>
-            <div class="col-span-4 flex flex-col gap-7 items-center">
+            <div class="col-span-4 flex flex-col gap-7 items-center sm:px-0 px-4">
                 <div class="flex justify-between gap-7 w-full grow">
                     <div class="flex aspect-square">
                         <img src="assets/img/hamburger.png" alt="hamburger" class="w-full aspect-square">
                     </div>
-                    <div class="flex justify-between items-center text-2xl w-full">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center items-center text-2xl w-full">
                         <p>Гамбургер мини</p>
-                        <div class="border-b border-dashed border-black w-fit grow mx-2 mt-1"></div>
+                        <div class="border-b border-dashed border-black w-fit grow mx-2 mt-1 sm:block hidden"></div>
                         <p>220 ₽</p>
                     </div>
                 </div>
@@ -148,9 +160,9 @@
                     <div class="flex aspect-square">
                         <img src="assets/img/hamburger.png" alt="hamburger" class="w-full aspect-square">
                     </div>
-                    <div class="flex justify-between items-center text-2xl w-full">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center items-center text-2xl w-full">
                         <p>Гамбургер мини</p>
-                        <div class="border-b border-dashed border-black w-fit grow mx-2 mt-1"></div>
+                        <div class="border-b border-dashed border-black w-fit grow mx-2 mt-1 sm:block hidden"></div>
                         <p>220 ₽</p>
                     </div>
                 </div>
@@ -158,9 +170,9 @@
                     <div class="flex aspect-square">
                         <img src="assets/img/hamburger.png" alt="hamburger" class="w-full aspect-square">
                     </div>
-                    <div class="flex justify-between items-center text-2xl w-full">
+                    <div class="flex sm:flex-row flex-col sm:justify-between justify-center items-center text-2xl w-full">
                         <p>Гамбургер мини</p>
-                        <div class="border-b border-dashed border-black w-fit grow mx-2 mt-1"></div>
+                        <div class="border-b border-dashed border-black w-fit grow mx-2 mt-1 sm:block hidden"></div>
                         <p>220 ₽</p>
                     </div>
                 </div>
@@ -170,12 +182,12 @@
     </div>
 
     <div class="bg-[url('assets/img/menu.png')] h-screen bg-cover flex flex-col">
-        <p class="text-[54px] text-center pt-24 pb-32 text-white">Наше меню</p>
-        <div class="container mx-auto grid grid-cols-3 gap-7">
+        <p class="lg:text-[54px] sm:text-[46px] text-[40px] text-center pt-24 pb-32 text-white">Наше меню</p>
+        <div class="xl:container xl:mx-auto xl:px-0 px-4 grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-7">
             <div class="flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7 relative">
                 <div class="absolute top-0 left-0 py-2 px-3 bg-[#D67E34] w-fit text-[13px]">RECOMMENDED</div>
                 <div class="relative">
-                    <img src="assets/img/item.png" alt="item">
+                    <img src="assets/img/item.png" alt="item" class="w-fit">
                     <div class="flex items-center justify-center rounded-full border-8 border-white text-white text-3xl bg-[#D67E34] w-[100px] h-[100px] absolute bottom-0 right-0 translate-x-2">420</div>
                 </div>
                 <p class="text-2xl">Гамбургер макси</p>
@@ -183,7 +195,7 @@
                     слой мяса</p>
                 <a href="#" class="bg-[#D67E34] text-white py-3 px-16 w-fit shadow-lg">ЗАКАЗАТЬ</a>
             </div>
-            <div class="flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7">
+            <div class="sm:flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7 hidden">
                 <div class="relative">
                     <img src="assets/img/item.png" alt="item">
                     <div class="flex items-center justify-center rounded-full border-8 border-white text-white text-3xl bg-[#D67E34] w-[100px] h-[100px] absolute bottom-0 right-0 translate-x-2">420</div>
@@ -193,7 +205,7 @@
                     слой мяса</p>
                 <a href="#" class="bg-[#D67E34] text-white py-3 px-16 w-fit shadow-lg">ЗАКАЗАТЬ</a>
             </div>
-            <div class="flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7">
+            <div class="lg:flex flex-col items-center bg-white gap-5 pt-20 py-16 pb-7 hidden">
                 <div class="relative">
                     <img src="assets/img/item.png" alt="item">
                     <div class="flex items-center justify-center rounded-full border-8 border-white text-white text-3xl bg-[#D67E34] w-[100px] h-[100px] absolute bottom-0 right-0 translate-x-2">420</div>
@@ -207,67 +219,67 @@
     </div>
 
     <div class="bg-[#C4C4C4]">
-        <div class="container mx-auto py-[102px] px-24">
-                <div class="swiper text-[20px] pb-10">
-                    <div class="swiper-wrapper w-full">
-                      <div class="swiper-slide flex flex-col items-center">
-                        <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
-                            Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
-                        <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
-                        <p class="font-semibold">Посетитель</p>
-                        <p>Николай</p>
-                      </div>
-                      <div class="swiper-slide flex flex-col items-center">
-                        <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
-                            Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
-                        <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
-                        <p class="font-semibold">Посетитель</p>
-                        <p>Николай</p>
-                      </div>
-                      <div class="swiper-slide flex flex-col items-center">
-                        <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
-                            Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
-                        <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
-                        <p class="font-semibold">Посетитель</p>
-                        <p>Николай</p>
-                      </div>
+        <div class="xl:container xl:mx-auto xl:px-0 px-4 md:py-[102px] py-5 md:px-24">
+            <div class="swiper text-[20px] pb-10">
+                <div class="swiper-wrapper w-full">
+                    <div class="swiper-slide flex flex-col items-center">
+                    <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                        Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                    <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                    <p class="font-semibold">Посетитель</p>
+                    <p>Николай</p>
                     </div>
-                    <div class="swiper-pagination bottom-0 flex items-center justify-center"></div>
+                    <div class="swiper-slide flex flex-col items-center">
+                    <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                        Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                    <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                    <p class="font-semibold">Посетитель</p>
+                    <p>Николай</p>
+                    </div>
+                    <div class="swiper-slide flex flex-col items-center">
+                    <p class="text-center">Я надолго запомню мой День рождения, проведённый в этом ресторане! Кусочек родной Армении!!! Отдельное спасибо за комплепент в виде фруктовой тарелки. 
+                        Будем рекомендовать этот ресторан своим друзьям и родственникам также за рубежом, путешествующих в Санкт-Петербург!!!</p>
+                    <img src="assets/img/visitor.png" alt="visitor" class="mt-5 mb-4 w-[100px] aspect-square">
+                    <p class="font-semibold">Посетитель</p>
+                    <p>Николай</p>
+                    </div>
                 </div>
+                <div class="swiper-pagination bottom-0 flex items-center justify-center"></div>
+            </div>
         </div>
     </div>
 
-    <div class="relative my-[100px]">
-        <div class="absolute left-0 top-[145px] w-8 h-[100px] bg-red-600"></div>
-        <div class="absolute right-0 top-[145px] w-8 h-[100px] bg-red-600"></div>
-        <div class="container mx-auto">
-            <p class="text-[54px] text-center mb-16">Галерея <span class="text-[#D67E34]">Блюд</span></p>
-            <div class="grid grid-cols-4 gap-7">
-                <div class="col-span-2">
-                    <a href="#"><img src="assets/img/gallery1.png" alt="gallery1" class="w-full h-full object-cover"></a>
+    <div class="relative md:my-[100px] my-[70px]">
+        <div class="absolute left-0 top-[145px] w-8 h-[100px] bg-red-600 xl:block hidden"></div>
+        <div class="absolute right-0 top-[145px] w-8 h-[100px] bg-red-600 xl:block hidden"></div>
+        <div class="xl:container xl:mx-auto xl:px-0 px-4">
+            <p class="lg:text-[54px] sm:text-[46px] text-[40px] text-center mb-16">Галерея <span class="text-[#D67E34] block sm:inline">Блюд</span></p>
+            <div class="grid sm:grid-cols-4 md:gap-7 grid-cols-1 gap-5">
+                <div class="sm:col-span-2 col-span-1">
+                    <a href="#"><img src="assets/img/gallery1.png" alt="gallery1" class="w-full h-full object-cover aspect-square sm:aspect-auto"></a>
                 </div>
-                <div>
+                <div class="w-full">
                     <a href="#"><img src="assets/img/gallery2.png" alt="gallery2" class="w-full h-full object-cover"></a>
                 </div>
-                <div>
+                <div class="w-full">
                     <a href="#"><img src="assets/img/gallery3.png" alt="gallery3" class="w-full h-full object-cover"></a>
                 </div>
-                <div>
+                <div class="w-full">
                     <a href="#"><img src="assets/img/gallery2.png" alt="gallery1" class="w-full h-full object-cover"></a>
                 </div>
-                <div>
+                <div class="w-full">
                     <a href="#"><img src="assets/img/gallery3.png" alt="gallery2" class="w-full h-full object-cover"></a>
                 </div>
-                <div class="col-span-2">
-                    <a href="#"><img src="assets/img/gallery1.png" alt="gallery3" class="w-full h-full object-cover"></a>
+                <div class="sm:col-span-2 col-span-1">
+                    <a href="#"><img src="assets/img/gallery1.png" alt="gallery3" class="w-full h-full object-cover aspect-square sm:aspect-auto"></a>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container mx-auto mb-[100px]">
-        <p class="text-[54px] text-center mb-24">Наши <span class="text-[#D67E34]">Повара</span></p>
-        <div class="grid grid-cols-3 gap-7">
+    <div class="xl:container xl:mx-auto xl:px-0 px-4 mb-[100px]">
+        <p class="lg:text-[54px] sm:text-[46px] text-[40px] text-center md:mb-24 mb-20">Наши <span class="text-[#D67E34] block sm:inline">Повара</span></p>
+        <div class="grid sm:grid-cols-3 md:gap-7 grid-cols-1 gap-4">
             <div>
                 <img src="assets/img/cook1.png" alt="cook1" class="object-cover w-full">
             </div>
@@ -281,7 +293,9 @@
     </div>
 
     <footer class="bg-[url('assets/img/footer.png')] w-full h-[732px] bg-cover bg-center"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="assets/script/swiper.js"></script>
+    <script src="assets/script/script.js"></script>
 </body>
 </html>
